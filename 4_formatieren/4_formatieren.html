@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Ausgaben manipulieren</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { margin-bottom: 40px; }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .copy-btn:hover { background-color: #45a049; }
+        .div-area {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<h1>Aufgabe "Ausgabe formatieren"</h1>
+Kombiniere die Prompt mit einer der Ergänzungsmöglichkeit in einem Modell deiner Wahl z.B.:
+<a target="_blank" rel="noopener noreferrer" href="https://copilot.microsoft.com/">Copilot</a>,
+<a target="_blank" rel="noopener noreferrer" href="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1">Duck.ai</a>,
+<a target="_blank" rel="noopener noreferrer" href="https://mistral.ai/">Mistral</a>
+
+<h1>Prompt</h1>
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div0')">Text kopieren</button>
+        <div id="div0" class="div-area">
+		
+Feedback:		
+„Funktioniert. Keine Beschwerden.“
+„Die Performance ist zufriedenstellend, aber die Bedienoberfläche wirkt etwas veraltet. Eventuell ein Update der UI in Betracht ziehen?“
+„Wow, das ist wirklich eine tolle Sache! Endlich ein Produkt, das hält, was es verspricht. Ich bin begeistert!“
+„Ich hatte mir mehr erwartet. Die Funktionen sind solide, aber die Einarbeitung dauert zu lange. Vielleicht eine bessere Anleitung anbieten?“
+„Das Produkt hat mir wirklich den Alltag erleichtert. Ich fühle mich jetzt viel sicherer und entspannter. Danke!“
+„Ich weiß nicht so recht, ob das Produkt wirklich besser ist als die Konkurrenz. Es gibt noch Luft nach oben.“
+„Wenn das Produkt noch Kaffee kochen könnte, wäre es perfekt! So ist es schon ziemlich gut.“
+„Im Vergleich zu anderen Produkten auf dem Markt ist das hier solide, aber nicht herausragend. Preis-Leistung stimmt.“
+„Die Produktverarbeitung ist hochwertig, die Lieferung war schnell und der Kundenservice freundlich. Insgesamt sehr zufrieden.“
+„Leider habe ich das Produkt zurückgeschickt. Es hat meine Anforderungen nicht erfüllt und war zu kompliziert in der Handhabung.“
+
+Aufgabe:
+Fasse das Feedback zusammen.
+        </div>
+    </div>
+
+<h1>Ergänzungsmöglichkeiten</h1>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div1')">Text kopieren</button>
+        <div id="div1" class="div-area">
+            Formatiere die Ausgabe in Form einer Tabelle mit den Spalten "Aspekt", "Anzahl Nennung", "Zitat / Beschreibung".
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div2')">Text kopieren</button>
+        <div id="div2" class="div-area">
+            Formatiere die Ausgabe in Form einer Tabelle mit den Spalten "Aspekt", "Anzahl Nennung", "Zitat / Beschreibung" im CSV-Format.
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div3')">Text kopieren</button>
+        <div id="div3" class="div-area">
+            Formatiere die Ausgabe als Aufzählung. Bewerte dabei, ob das Feedback eher positiv oder negativ ist.
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div4')">Text kopieren</button>
+        <div id="div4" class="div-area">
+            Formatiere die Ausgabe als Fließtext mit zwei bis drei Sätzen in einfachem britischem Englisch. Bewerte dabei, ob das Feedback eher positiv oder negativ ist. 
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div5')">Text kopieren</button>
+        <div id="div5" class="div-area">
+            Formatiere die Ausgabe Fließtext mit zwei bis drei Sätzen im Stil einer Rede von Donald Trump.
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div6')">Text kopieren</button>
+        <div id="div6" class="div-area">
+            Schreibe als Sonnet.
+        </div>
+    </div>
+	
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div7')">Text kopieren</button>
+        <div id="div7" class="div-area">
+            Formatiere die Ausgabe Fließtext. Gewichte dabei das kritische Feedback stärker.
+        </div>
+    </div>
+	
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div8')">Text kopieren</button>
+        <div id="div8" class="div-area">
+            Formatiere die Ausgabe Fließtext. Schreibe überschwenglich positiv.
+        </div>
+    </div>
+	
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div9')">Text kopieren</button>
+        <div id="div9" class="div-area">
+            Formatiere die Ausgabe in Form einer Tabelle mit den Spalten "Aspekt", "Anzahl Nennung", "Zitat / Beschreibung" als HTML-Tabelle.
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(divId) {
+            const text = document.getElementById(divId).textContent;
+            navigator.clipboard.writeText(text)
+        }
+    </script>
+</body>
+</html>

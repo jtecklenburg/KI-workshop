@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Ausgaben manipulieren</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { margin-bottom: 40px; }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .copy-btn:hover { background-color: #45a049; }
+        .div-area {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<h1>Aufgabe "Kontext und Rollen"</h1>
+Probiere und vergleiche die Prompts mit einer der Ergänzungsmöglichkeit in einem Modell deiner Wahl z.B.:
+<a target="_blank" rel="noopener noreferrer" href="https://copilot.microsoft.com/">Copilot</a>,
+<a target="_blank" rel="noopener noreferrer" href="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1">Duck.ai</a>,
+<a target="_blank" rel="noopener noreferrer" href="https://mistral.ai/">Mistral</a>
+Achte darauf, dass Du bei jeder Prompt eine neue Unterhaltung startest, weil sich die KI sonst an das Vorhergehende erinnert und das dann das Ergebnis beeinflussen kann.
+
+<h1>Rollen</h1>
+Hinweis: Im Test haben sich hier die Ausgaben bei verschiedenen Modellen stark unterschieden.
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div0')">Text kopieren</button>
+        <div id="div0" class="div-area">
+Antworte als Experte für Kryptowährungen. Wie kann ich 1000€ in Krypto anlegen?		
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div1')">Text kopieren</button>
+        <div id="div1" class="div-area">
+Antworte als mein persönlicher Finanzberater. Sei kritisch. Wie kann ich 1000€ in Kryptowährung anlegen?
+        </div>
+    </div>
+
+<h1>Kontext</h1>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div2')">Text kopieren</button>
+        <div id="div2" class="div-area">
+Kontext:
+Die InsureTech Solutions AG, gegründet 1995 in Frankfurt am Main, ist ein führender Versicherungskonzern in Europa, der sich auf Lebens-, Kranken-, Sach-, Industrie- und Rückversicherungen spezialisiert hat. Das Unternehmen setzt stark auf Technologie und digitale Lösungen, um innovative Versicherungsprodukte anzubieten.
+
+Ein zentraler Aspekt der internen Prozesse ist die Softwareentwicklung, die nach dem Scaled Agile Framework (SAFE) organisiert ist. Agile Release Trains (ARTs) und eine DevOps-Kultur ermöglichen eine effiziente und flexible Softwareentwicklung. Continuous Integration/Continuous Deployment (CI/CD) und strenge Qualitätssicherungsmaßnahmen gewährleisten eine schnelle und zuverlässige Bereitstellung hochwertiger Software.
+
+Der Kundenservice ist rund um die Uhr verfügbar und nutzt digitale Plattformen, um den Kunden bestmöglichen Support zu bieten. Das Unternehmen engagiert sich zudem in den Bereichen Nachhaltigkeit und gesellschaftliche Verantwortung.
+
+Mit einer starken Marktposition und einem Fokus auf Innovation ist die InsureTech Solutions AG gut für die Zukunft aufgestellt und plant, seine internationalen Aktivitäten weiter auszubauen.
+
+Aufgabe:
+Ich bin Product Owner für eine KI-Lösung für die Optimierung interner Prozesse. Bitte erstelle mir eine Stakeholder-Analyse.
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div3')">Text kopieren</button>
+        <div id="div3" class="div-area">
+Kontext:
+Als IT-Produktmanager im Bundesministerium für Inneres und Sport (MI) setze ich das V-Modell® XT Bund für die Softwareentwicklung ein, um die Qualität und Nachvollziehbarkeit unserer Projekte zu gewährleisten. Der Prozess beginnt mit einer detaillierten Bedarfsanalyse, bei der ich eng mit den Fachabteilungen zusammenarbeite, um Anforderungen zu erfassen und in Lasten- und Pflichtenheften zu dokumentieren. 
+
+Die Entwicklung erfolgt in klar definierten Phasen, wobei wir Prototypen erstellen und Feedback der Nutzer einholen. Die Integration neuer Systeme in die bestehende IT-Infrastruktur erfordert Überzeugungsarbeit, insbesondere in Bezug auf Schnittstellen und Datenschutz. Qualitätssicherung ist ein zentraler Bestandteil, wobei Tests oft durch die regulären Aufgaben der Mitarbeitenden verzögert werden.
+
+Die Einführung neuer IT-Lösungen erfordert umfassende Schulungen und ein effektives Change Management, um Widerstände zu überwinden. Nach der Einführung sind Wartung und kontinuierliche Verbesserung wichtig, wobei regelmäßige Updates auf Nutzerfeedback basieren. Trotz der Herausforderungen einer traditionellen Verwaltung bleibt die Möglichkeit, die Effizienz zu steigern und den Bürgerinnen und Bürgern besser zu dienen, eine ständige Motivation.
+
+Aufgabe:
+Ich bin IT-Produktmanager für eine KI-Lösung für die Optimierung interner Prozesse. Bitte erstelle mir eine Stakeholder-Analyse.
+        </div>
+    </div>
+	
+<h1>Ansichten mehrerer Rollen berücksichtigen</h1>
+
+    <div class="container">
+        <button class="copy-btn" onclick="copyToClipboard('div4')">Text kopieren</button>
+        <div id="div4" class="div-area">
+Erstelle eine Diskussion zum Thema "Einführung von KI in einem mittelständischen Unternehmen" zwischen einem Teammitglied (Erfahrung als Data Scientist), dem Geschäftsführer, einer Kollegin vom Betriebsrat, dem Scrum Master und dem zukünftigen Product Owner für die KI-Anwendung. Fasse zum Schluss die kritischen Aspekte zusammen.
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(divId) {
+            const text = document.getElementById(divId).textContent;
+            navigator.clipboard.writeText(text)
+        }
+    </script>
+</body>
+</html>
